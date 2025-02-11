@@ -24,6 +24,40 @@
     ]
   }
   </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      emailjs.init("wOztMgbNpkEPyr0sd"); // Replace with your EmailJS Public Key
+  
+      document.getElementById("contact-form").addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent default form submission
+  
+        // Get form values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+  
+        // Send email using EmailJS
+        emailjs.send("service_jbeaiex", "template_785fcpo", {
+          name: name,
+          email: email,
+          message: message,
+        })
+        .then(response => {
+          console.log("SUCCESS!", response.status, response.text);
+          document.getElementById("form-messages").innerHTML = 
+            "<p style='color: green;'>Message sent successfully!</p>";
+          document.getElementById("contact-form").reset(); // Clear form
+        })
+        .catch(error => {
+          console.log("FAILED...", error);
+          document.getElementById("form-messages").innerHTML = 
+            "<p style='color: red;'>Failed to send message. Try again!</p>";
+        });
+      });
+    });
+  </script>
+  
 </head>
 <body>
   <!-- Header -->
@@ -85,7 +119,7 @@
 
   <!-- Projects -->
   <section id="projects">
-    <div class="container">
+    <div class="container-project">
       <h2>Projects</h2>
       <div class="projects-grid">
         
@@ -118,6 +152,7 @@
           <div style="text-align: center;">
             <a href="https://dagshub.com/maimunul/Mental-Health-Data-Competition-s4-e11-Kaggle" class="btn">View on DagsHub</a>
           </div>
+          </div>
         <!-- Project 2 -->
         <div class="project-card">
           <div class="project-icon">
@@ -144,77 +179,91 @@
           <div style="text-align: center;">
             <a href="https://github.com/maimunul/Rice-Leaf-Disease-Classification-using-CNN" class="btn">View on GitHub</a>
           </div>
-
-        <!-- Project 3 -->
-        <div class="project-card">
-          <div class="project-icon">
-            <i class="fas fa-apple-alt"></i>
-          </div>
-          <h3>Fruits & Vegetables Classification</h3>
-          <p>
-            Developed a Convolutional Neural Network (CNN) for the
-            classification of 36 different fruit and vegetable classes, achieving
-            a test accuracy of <strong>93.59%</strong> . The model demonstrated strong
-            performance with a macro-average score of precision (<strong>95%</strong>), recall
-            (<strong>93%</strong>), and F1-score (<strong>94%</strong>).
-          </p>
-          <div class="tech-stack">
-            <span class="tech-icon"><i class="fab fa-python"></i> Python</span>
-            <span class="tech-icon"><i class="fas fa-brain"></i> TensorFlow</span>
-            <span class="tech-icon"><i class="fas fa-chart-line"></i> CNN</span>
-            <span class="tech-icon"><i class="fas fa-chart-line"></i> Jupyter Notebook</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress" style="width: 95.54%;">95.54% Test Accuracy</div>
-          </div>
-          <a href="https://github.com/maimunul/Classification-and-Quantization-Technique-using-CNN-/blob/main/quantization-technique-on-cnn.ipynb" class="btn">View on GitHub</a>
+        
         </div>
+        
+      </div>
 
-        <!-- Project 4 -->
-        <div class="project-card">
-          <div class="project-icon">
-            <i class="fas fa-seedling"></i>
-          </div>
-          <img src="assets/ProjectLoan.png" alt="Loan Status Prediction" style="width: 40%; height: 40%; border-radius: 10px; margin-bottom: 15px;">
-          <h3>Loan Status Prediction with CatBoost & RandomForest </h3>
-          <p>
-            Achieved a Kaggle rank of <strong>1597/3858</strong> with an accuracy of
-            <strong>95.897%</strong> by building a CatBoost model to predict loan defaults.
-            Designed a preprocessing pipeline, optimized the model with
-            GridSearchCV, and utilized both LIME and SHAP for feature
-            importance analysis.
-          </p>
-          <div class="tech-stack">
-            <span class="tech-icon"><i class="fab fa-python"></i> Python</span>
-            <span class="tech-icon"><i class="fas fa-brain"></i> CatBoost</span>
-            <span class="tech-icon"><i class="fas fa-chart-line"></i> SHAP</span>
-            <span class="tech-icon"><i class="fas fa-chart-line"></i>LIME</span>
-          </div>
-          <div class="progress-bar">
-            <div class="progress" style="width: 95.897%;">95.897% Accuracy</div>
-          </div>
-          <div style="text-align: center; margin-top: 10px;">
-            <a href="https://github.com/maimunul/Loan-Status-Prediction-with-CatBoost-and-RandomForest" class="btn">View on GitHub</a>
-          </div>
-        </div>
+      
+      
 
 
-        <!-- Project 5 -->
-        <div class="project-card">
-          <div class="project-icon">
-            <i class="fas fa-seedling"></i>
-          </div>
-          <h3>Predicting Cross-sell Insurance: Responsible AI Project</h3>
-          <p>
-            An online non-credit project authorized and offered by HiCounselour, Where developed a Random Forest model to predict cross-sell insurance interest, using SMOTE for class balancing and SHAP for interpretability. 
-          </p>
-          <div class="tech-stack">
-            <span class="tech-icon"><i class="fab fa-python"></i> Python</span>
-            <span class="tech-icon"><i class="fas fa-brain"></i> Machine Learning</span>
-            <span class="tech-icon"><i class="fas fa-chart-line"></i> Responsible AI (LIME & SHAP)</span>
-          </div>
-          <a href="https://hicounselor.com/certificate/verify/MTE2ODUyMjk2" class="btn">View Certificate</a>
-        </div>
+
+      <div class="projects-grid">
+<!-- Project 3 -->
+<div class="project-card">
+  <div class="project-icon">
+    <i class="fas fa-apple-alt"></i>
+  </div>
+  <h3>Fruits & Vegetables Classification</h3>
+  <p>
+    Developed a Convolutional Neural Network (CNN) for the
+    classification of 36 different fruit and vegetable classes, achieving
+    a test accuracy of <strong>93.59%</strong> . The model demonstrated strong
+    performance with a macro-average score of precision (<strong>95%</strong>), recall
+    (<strong>93%</strong>), and F1-score (<strong>94%</strong>).
+  </p>
+  <div class="tech-stack">
+    <span class="tech-icon"><i class="fab fa-python"></i> Python</span>
+    <span class="tech-icon"><i class="fas fa-brain"></i> TensorFlow</span>
+    <span class="tech-icon"><i class="fas fa-chart-line"></i> CNN</span>
+    <span class="tech-icon"><i class="fas fa-chart-line"></i> Jupyter Notebook</span>
+  </div>
+  <div class="progress-bar">
+    <div class="progress" style="width: 95.54%;">95.54% Test Accuracy</div>
+  </div>
+  <a href="https://github.com/maimunul/Classification-and-Quantization-Technique-using-CNN-/blob/main/quantization-technique-on-cnn.ipynb" class="btn">View on GitHub</a>
+</div>
+  <!-- Project 4 -->
+  <div class="project-card">
+    <div class="project-icon">
+      <i class="fas fa-seedling"></i>
+    </div>
+    <img src="assets/ProjectLoan.png" alt="Loan Status Prediction" style="width: 40%; height: 40%; border-radius: 10px; margin-bottom: 15px;">
+    <h3>Loan Status Prediction with CatBoost & RandomForest </h3>
+    <p>
+      Achieved a Kaggle rank of <strong>1597/3858</strong> with an accuracy of
+      <strong>95.897%</strong> by building a CatBoost model to predict loan defaults.
+      Designed a preprocessing pipeline, optimized the model with
+      GridSearchCV, and utilized both LIME and SHAP for feature
+      importance analysis.
+    </p>
+    <div class="tech-stack">
+      <span class="tech-icon"><i class="fab fa-python"></i> Python</span>
+      <span class="tech-icon"><i class="fas fa-brain"></i> CatBoost</span>
+      <span class="tech-icon"><i class="fas fa-chart-line"></i> SHAP</span>
+      <span class="tech-icon"><i class="fas fa-chart-line"></i>LIME</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" style="width: 95.897%;">95.897% Accuracy</div>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+      <a href="https://github.com/maimunul/Loan-Status-Prediction-with-CatBoost-and-RandomForest" class="btn">View on GitHub</a>
+    </div>
+  </div>
+
+        
+
+</div>
+
+<div class="projects-grid">
+
+<!-- Project 5 -->
+<div class="project-card">
+  <div class="project-icon">
+    <i class="fas fa-seedling"></i>
+  </div>
+  <h3>Predicting Cross-sell Insurance: Responsible AI Project</h3>
+  <p>
+    An online non-credit project authorized and offered by HiCounselour, Where developed a Random Forest model to predict cross-sell insurance interest, using SMOTE for class balancing and SHAP for interpretability. 
+  </p>
+  <div class="tech-stack">
+    <span class="tech-icon"><i class="fab fa-python"></i> Python</span>
+    <span class="tech-icon"><i class="fas fa-brain"></i> Machine Learning</span>
+    <span class="tech-icon"><i class="fas fa-chart-line"></i> Responsible AI (LIME & SHAP)</span>
+  </div>
+  <a href="https://hicounselor.com/certificate/verify/MTE2ODUyMjk2" class="btn">View Certificate</a>
+</div>
         <!-- Project 6 -->
         <div class="project-card">
           <div class="project-icon">
@@ -241,8 +290,11 @@
             <a href="https://www.kaggle.com/code/maimunulkjisan/titanic-transports-lightgbm-0-80827" class="btn">View on Kaggle</a>
           </div>
         </div>
+        </div>
       </div>
     </div>
+ 
+  </div>
   </section>
 
 
