@@ -24,7 +24,6 @@
     ]
   }
   </script>
-
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       emailjs.init("wOztMgbNpkEPyr0sd"); // Replace with your EmailJS Public Key
@@ -58,30 +57,141 @@
     });
   </script>
   
+<style>
+  /* Reset and base styles */
+  * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+  }
+  /* Navbar styles */
+  .navbar {
+      background-color: #2c3e50;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      transition: all 0.3s ease;
+  }
+  .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  .navbar-logo {
+      color: #ecf0f1;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+  }
+  .navbar-menu {
+      display: flex;
+      list-style-type: none;
+  }
+  .navbar-item {
+      margin-left: 1.5rem;
+  }
+  .navbar-link {
+      color: #ecf0f1;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+  }
+  .navbar-link:hover {
+      color: #3498db;
+  }
+  .navbar-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: #ecf0f1;
+      cursor: pointer;
+  }
+  /* Responsive design */
+  @media (max-width: 768px) {
+      .navbar-menu {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #2c3e50;
+          padding: 1rem 0;
+      }
+      .navbar-logo {
+      color: #ecf0f1;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      margin-top: auto;
+  }
+      .navbar-menu.active {
+          display: flex;
+      }
+      .navbar-item {
+          margin: 0.5rem 0;
+      }
+      .navbar-toggle {
+          display: block;
+      }
+  }
+</style>
 </head>
 <body>
+<nav class="navbar">
+  <div class="navbar-container">
+      <a href="#" class="navbar-logo">Maimunul Karim Jisan</a>
+      <button class="navbar-toggle" aria-label="Toggle navigation">
+          ☰
+      </button>
+      <ul class="navbar-menu">
+          <li class="navbar-item"><a href="#about" class="navbar-link">About</a></li>
+          <li class="navbar-item"><a href="#skills" class="navbar-link">Skills</a></li>
+          <li class="navbar-item"><a href="#projects" class="navbar-link">Projects</a></li>
+          <li class="navbar-item"><a href="#research" class="navbar-link">Research</a></li>
+          <li class="navbar-item"><a href="#blog" class="navbar-link">Blog</a></li>
+          <li class="navbar-item"><a href="#contact" class="navbar-link">Contact</a></li>
+      </ul>
+  </div>
+</nav>
   <!-- Header -->
-  <header>
+  <!-- <header>
     <div class="container">
       <h1>Maimunul Karim Jisan</h1>
       <p>Aspiring Data Scientist | Deep Learning & Machine Specialist</p>
       <a href="assets/resume.pdf" download class="btn" aria-label="Download Resume">Download Resume</a>
     </div>
-  </header>
+  </header> -->
 
   <!-- About Me -->
   <section id="about">
     <div class="container about-container">
       <h2>About Me</h2>
       <div class="about-grid">
-        <img src="assets/profile.jpg" 
+        <div>
+          <img src="assets/profile.jpg" 
              alt="Maimunul Karim Jisan portrait" 
              class="profile-img"
              loading="lazy"
              width="200"
              height="200">
+
+             <h1 class="jisan">Maimunul Karim Jisan</h1>
+                          <p class="">Aspiring Data Scientist | Deep Learning & Machine Specialist</p>
+        </div>
         <div class="about-text">
-          <p>
+          <p class="aboutDetails">
             I’m Maimunul Karim Jisan, an aspiring data scientist proficient in developing resource-efficient deep learning models and 
             neural architectures. My expertise spans convolutional neural networks (CNNs), ensemble machine learning 
             algorithms, and advanced statistical methods, including hypothesis testing and regression analysis. Passionate about bridging 
@@ -89,6 +199,9 @@
             optimizing model scalability and performance to address real-world challenges such as crop yield prediction and medical diagnostics.
           </p>
         </div>
+        
+        <!-- <a href="assets/resume.pdf" download class="btn" aria-label="Download Resume">Download Resume</a> -->
+        <!-- <a href="assets/resume.pdf" download class="btn" aria-label="Download Resume">Download Resume</a> -->
       </div>
     </div>
   </section>
@@ -126,6 +239,9 @@
         <!--project1--->
         <div class="project-card">
           <div class="project-icon">
+
+
+            
             <img src="assets/ProjectMental.jpeg" alt="Project Image" style="width: 40%; height: 40%; max-height: 200px; object-fit: cover; border-radius: 5px;">
           </div>
           <h3>Mental Health Data Analysis and Prediction (Kaggle
@@ -150,13 +266,13 @@
             <div class="progress" style="width: 94.136%;">94.136% Test Accuracy</div>
           </div>
           <div style="text-align: center;">
-            <a href="https://dagshub.com/maimunul/Mental-Health-Data-Competition-s4-e11-Kaggle" class="btn">View on DagsHub</a>
+            <a  target="_blank" href="https://dagshub.com/maimunul/Mental-Health-Data-Competition-s4-e11-Kaggle" class="btn">View on DagsHub</a>
           </div>
           </div>
         <!-- Project 2 -->
         <div class="project-card">
           <div class="project-icon">
-            <img src="assets/Project1.png" alt="Project Image" style="width: 40%; height: 40%; max-height: 200px; object-fit: cover; border-radius: 5px;">
+            <img src="assets/Project1.png" alt="Project Image" style="width: 80%; height: 40%; max-height: 200px; object-fit: cover; border-radius: 5px;">
           </div>
           <h3>Rice Leaf Disease Classification & Compression</h3>
           <p>
@@ -177,7 +293,7 @@
             <div class="progress" style="width: 99.37%;">99.37% Test Accuracy</div>
           </div>
           <div style="text-align: center;">
-            <a href="https://github.com/maimunul/Rice-Leaf-Disease-Classification-using-CNN" class="btn">View on GitHub</a>
+            <a target="_blank" href="https://github.com/maimunul/Rice-Leaf-Disease-Classification-using-CNN" class="btn">View on GitHub</a>
           </div>
         
         </div>
@@ -212,7 +328,7 @@
   <div class="progress-bar">
     <div class="progress" style="width: 95.54%;">95.54% Test Accuracy</div>
   </div>
-  <a href="https://github.com/maimunul/Classification-and-Quantization-Technique-using-CNN-/blob/main/quantization-technique-on-cnn.ipynb" class="btn">View on GitHub</a>
+  <a target="_blank" href="https://github.com/maimunul/Classification-and-Quantization-Technique-using-CNN-/blob/main/quantization-technique-on-cnn.ipynb" class="btn">View on GitHub</a>
 </div>
   <!-- Project 4 -->
   <div class="project-card">
@@ -238,7 +354,7 @@
       <div class="progress" style="width: 95.897%;">95.897% Accuracy</div>
     </div>
     <div style="text-align: center; margin-top: 10px;">
-      <a href="https://github.com/maimunul/Loan-Status-Prediction-with-CatBoost-and-RandomForest" class="btn">View on GitHub</a>
+      <a target="_blank" href="https://github.com/maimunul/Loan-Status-Prediction-with-CatBoost-and-RandomForest" class="btn">View on GitHub</a>
     </div>
   </div>
 
@@ -262,7 +378,7 @@
     <span class="tech-icon"><i class="fas fa-brain"></i> Machine Learning</span>
     <span class="tech-icon"><i class="fas fa-chart-line"></i> Responsible AI (LIME & SHAP)</span>
   </div>
-  <a href="https://hicounselor.com/certificate/verify/MTE2ODUyMjk2" class="btn">View Certificate</a>
+  <a target="_blank" href="https://hicounselor.com/certificate/verify/MTE2ODUyMjk2" class="btn">View Certificate</a>
 </div>
         <!-- Project 6 -->
         <div class="project-card">
@@ -287,7 +403,7 @@
             <div class="progress" style="width: 80.827%;">80.827% Accuracy</div>
           </div>
           <div style="text-align: center; margin-top: 10px;">
-            <a href="https://www.kaggle.com/code/maimunulkjisan/titanic-transports-lightgbm-0-80827" class="btn">View on Kaggle</a>
+            <a target="_blank" href="https://www.kaggle.com/code/maimunulkjisan/titanic-transports-lightgbm-0-80827" class="btn">View on Kaggle</a>
           </div>
         </div>
         </div>
@@ -385,40 +501,57 @@
       
       <!-- Blog 1 -->
       <div class="blog-card">
-        <img src="assets/ProbabilityDistribution.png" alt="Probability Distributions" class="blog-img">
+        <a href="https://medium.com/@maimunulkjisan0/understanding-probability-distributions-a-guide-to-random-variables-and-density-estimation-e368918f0dab" class="">
+        <figure class="image-wrap">
+          <img ="" src='/assets/blog1.png' alt="" />
+        </figure>
+        <!-- <img src="assets/ProbabilityDistribution.png" alt="Probability Distributions" class="blog-img"> -->
         <div class="blog-content">
           <h3>Understanding Probability Distributions: A Guide to Random Variables and Density Estimation</h3>
           <p>Probability distributions are fundamental in statistics and machine learning. This guide covers key concepts, including discrete and continuous 
             distributions, probability density functions (PDFs), cumulative distribution functions (CDFs), and how they apply to real-world data analysis.</p>
           <a href="https://medium.com/@maimunulkjisan0/understanding-probability-distributions-a-guide-to-random-variables-and-density-estimation-e368918f0dab" class="btn">Read More</a>
         </div>
+      </a>
       </div>
-
       <!-- Blog 2 -->
+       
       <div class="blog-card">
-        <img src="assets/BlogNormalDistribution.png" alt="Normal Distribution" class="blog-img">
+        <a href="https://medium.com/@maimunulkjisan0/understanding-the-normal-distribution-a-fundamental-concept-in-statistics-5ab10e7c7896" class="">
+        <figure class="image-wrap">
+          <img ="" src='/assets/blog2.png' alt="" />
+        </figure>
         <div class="blog-content">
           <h3>Understanding the Normal Distribution: A Fundamental Concept in Statistics</h3>
           <p>The normal distribution, also known as the Gaussian distribution, is one of the most essential concepts in probability and statistics. Learn why it appears 
             so frequently in data science, how to interpret its properties, and its significance in hypothesis testing and inferential statistics.</p>
           <a href="https://medium.com/@maimunulkjisan0/understanding-the-normal-distribution-a-fundamental-concept-in-statistics-5ab10e7c7896" class="btn">Read More</a>
         </div>
+      </a>
       </div>
-
       <!-- Blog 3 -->
+       
       <div class="blog-card">
-        <img src="assets/BlogQQplot.png" alt="QQ Plot" class="blog-img">
+        <a href="https://medium.com/@maimunulkjisan0/understanding-qq-plots-visualizing-and-interpreting-normality-in-data-da2e97d80c37" class="">
+        <figure class="image-wrap">
+          <img ="" src='/assets/blog3.png' alt="" />
+        </figure>
         <div class="blog-content">
           <h3>Understanding QQ Plots: Visualizing and Interpreting Normality in Data</h3>
           <p>Quantile-Quantile (QQ) plots are a powerful tool for assessing whether a dataset follows a specific distribution, particularly the normal distribution. 
             This article explains how to interpret QQ plots, detect deviations, and use them in statistical analysis.</p>
           <a href="https://medium.com/@maimunulkjisan0/understanding-qq-plots-visualizing-and-interpreting-normality-in-data-da2e97d80c37" class="btn">Read More</a>
         </div>
+      </a>
       </div>
-
+   
       <!-- Blog 4 -->
+      
       <div class="blog-card">
-        <img src="assets/BlogCLT.png" alt="Central Limit Theorem" class="blog-img">
+        <a href="https://medium.com/@maimunulkjisan0/the-central-limit-theorem-explained-why-normal-distributions-matter-in-statistics-d3fb2d601554" class="">
+        <figure class="image-wrap">
+          <img ="" src='/assets/blog4.png' alt="" />
+        </figure>
         <div class="blog-content">
           <h3>The Central Limit Theorem Explained: Why Normal Distributions Matter in Statistics</h3>
           <p>The Central Limit Theorem (CLT) is one of the most critical theorems in statistics. It explains why the normal distribution appears in so many statistical 
@@ -426,18 +559,24 @@
           <a href="https://medium.com/@maimunulkjisan0/the-central-limit-theorem-explained-why-normal-distributions-matter-in-statistics-d3fb2d601554" class="btn">Read More</a>
         </div>
       </div>
-
+    </a>
       <!-- Blog 5 -->
+      
       <div class="blog-card">
-        <img src="assets/BlogRealLife.png" alt="Real-Life Data Analysis" class="blog-img">
+        <a href="https://medium.com/@maimunulkjisan0/analyzing-real-life-data-using-statistical-concepts-a-case-study-68988059f5da" class="">
+        <figure class="image-wrap">
+          <img ="" src='/assets/blog5.png' alt="" />
+        </figure>
         <div class="blog-content">
           <h3>Analyzing Real-Life Data Using Statistical Concepts: A Case Study</h3>
           <p>Applying statistical concepts to real-world datasets can provide meaningful insights. This case study demonstrates how data visualization, hypothesis testing, 
             and probability distributions are used to extract valuable information from real-world data.</p>
           <a href="https://medium.com/@maimunulkjisan0/analyzing-real-life-data-using-statistical-concepts-a-case-study-68988059f5da" class="btn">Read More</a>
         </div>
+     </a>
       </div>
     </div>
+  </a>
   </div>
 </section>
 
@@ -487,6 +626,30 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
+  <script src="script.js"></script><script>
+    // Toggle mobile menu
+    document.querySelector('.navbar-toggle').addEventListener('click', function() {
+        document.querySelector('.navbar-menu').classList.toggle('active');
+    });
+
+    // Smooth scrolling for navbar links
+    document.querySelectorAll('.navbar-link').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            document.querySelector('.navbar').style.backgroundColor = 'rgba(44, 62, 80, 0.9)';
+        } else {
+            document.querySelector('.navbar').style.backgroundColor = '#2c3e50';
+        }
+    });
+</script>
 </body>
 </html>
