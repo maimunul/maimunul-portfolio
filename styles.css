@@ -13,13 +13,16 @@ body {
   margin: auto;
   overflow: hidden;
 }
+
 .container-project {
   width: 90%;
   margin: auto;
   overflow: hidden;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: #333;
 }
 
@@ -48,10 +51,17 @@ header {
   padding: 20px 0;
   text-align: center;
 }
-.jisan{
-  font-size: 1.1em;
+
+.jisan {
+  font-size: 18px;
 
 }
+
+.jisan-title {
+  font-size: 11px;
+  margin: -12px;
+}
+
 header h1 {
   margin: 0;
   font-size: 2.5em;
@@ -64,12 +74,14 @@ header p {
 
 /* About Me */
 #about {
-  padding: 40px 0;
+  /* padding: 40px 0; */
+  padding-top: 80px;
   text-align: center;
 }
+
 .aboutDetails {
   font-size: 0.9em;
-
+  padding-bottom: 70px;
   text-align: justify;
 }
 
@@ -108,7 +120,8 @@ header p {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* This ensures two columns per row */
+  grid-template-columns: repeat(2, 1fr);
+  /* This ensures two columns per row */
   gap: 4px;
 }
 
@@ -116,8 +129,8 @@ header p {
 .project-card {
   background: #fff;
   padding: 25px;
-  padding-top: 30px;  
-  padding-bottom: 80px; 
+  padding-top: 30px;
+  padding-bottom: 80px;
   border-radius: 12px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -145,7 +158,7 @@ header p {
   font-size: 1.6em;
   margin-bottom: 12px;
   color: #333;
-  
+
 }
 
 .project-card p {
@@ -205,154 +218,181 @@ header p {
   width: 200px;
 }
 
+
+
+.contact_btn {
+  background: #ff4757;
+  color: white;
+  padding: 10px 15px;
+  /* Ensure proper spacing */
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 1em;
+  transition: background 0.3s;
+  display: inline-flex;
+  /* Makes it behave more like a button */
+  align-items: center;
+  /* Centers the icon */
+  justify-content: center;
+  width: 200px;
+  text-align: center;
+}
+
 .btn:hover {
+  background: #7CA9E9;
+  color: #010101;
+}
+
+.contact_btn:hover {
   background: #7CA9E9;
   color: #010101;
 }
 
 /* Blog Section Styling */
 #blog {
-padding: 80px 0;
-background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-text-align: center;
+  padding: 80px 0;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  text-align: center;
 }
 
 .container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 h2 {
-font-size: 2.5em;
-color: #023a76;
-margin-bottom: 2px;
-position: relative;
-display: inline-block;
+  font-size: 2.5em;
+  color: #023a76;
+  margin-bottom: 2px;
+  position: relative;
+  display: inline-block;
 }
 
 h2::after {
-content: '';
-display: block;
-width: 60%;
-height: 3px;
-background: #023a76;
-margin: 10px auto 0;
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: #023a76;
+  margin: 10px auto 0;
 }
 
 .blog-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 30px;
-margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
 }
 
 .blog-card {
-background: #fff;
-border-radius: 15px;
-overflow: hidden;
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-height: auto;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: auto;
 }
 
 .blog-card:hover {
-transform: translateY(-10px);
-box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .blog-img {
-width: 100%;
-height: 200px;
-object-fit: cover;
-transition: transform 0.3s ease;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 }
 
 .blog-card:hover .blog-img {
-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .blog-content {
-padding: 25px;
+  padding: 25px;
 }
 
 .blog-content h3 {
-font-size: 1.1em;
-color: #023a76;
-margin-bottom: 15px;
-text-align: start;
+  font-size: 1.1em;
+  color: #023a76;
+  margin-bottom: 15px;
+  text-align: start;
 }
 
 .blog-content p {
-color: #666;
-font-size: 0.82em;
-margin-bottom: 20px;
-text-align: justify;
-/* justify-content: ; */
+  color: #666;
+  font-size: 0.82em;
+  margin-bottom: 20px;
+  text-align: justify;
+  /* justify-content: ; */
 }
 
 .blog-content .btn {
-display: inline-block;
-padding: 12px 20px;
-background: #cd8aea;
-color: #010101;
-border-radius: 25px;
-text-decoration: none;
-font-weight: 600;
-transition: background 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  padding: 12px 20px;
+  background: #cd8aea;
+  color: #010101;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .blog-content .btn:hover {
-background: #85bbf5;
-transform: translateY(-3px);
+  background: #85bbf5;
+  transform: translateY(-3px);
 }
 
 /* Contact */
 #contact {
-padding: 40px 0;
-text-align: center;
+  padding: 40px 0;
+  text-align: center;
 }
 
 .contact-form {
-max-width: 600px;
-margin: 20px auto;
-text-align: left;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: left;
 }
 
-.contact-form input, .contact-form textarea {
-width: 100%;
-padding: 10px;
-margin-bottom: 10px;
-border: 1px solid #ccc;
-border-radius: 5px;
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .contact-form button {
-width: 100%;
-padding: 10px;
-background: #023a76;
-color: #fff;
-border: none;
-border-radius: 5px;
-cursor: pointer;
+  width: 100%;
+  padding: 10px;
+  background: #023a76;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .contact-form button:hover {
-background: #03468e;
+  background: #03468e;
 }
 
 .contact-links {
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 /* Footer */
 footer {
-background: #333;
-color: #fff;
-text-align: center;
-padding: 10px 0;
-margin-top: 20px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
 }
+
 /* .research-card {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -367,6 +407,7 @@ margin-top: 20px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
 }
+
 /* .project-title {
   color: #2c5f2d;
   font-size: 1.4rem;
@@ -377,27 +418,32 @@ margin-top: 20px;
   margin-bottom: 10px;
   text-align: center;
 }
+
 .highlight {
   color: #2c5f2d;
   font-weight: 600;
 }
+
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   margin: 1rem 0;
 }
+
 .tech-item {
   background: #f5f5f5;
   padding: 1rem;
   border-radius: 8px;
 }
+
 .impact-statement {
   background: #f0f7e6;
   padding: 1rem;
   border-left: 4px solid #8db596;
   margin: 1rem 0;
 }
+
 /* .badge {
   display: inline-block;
   padding: 0.3rem 0.6rem;
@@ -419,82 +465,84 @@ margin-top: 20px;
 
 /* Research Card Styles */
 .research-card {
-      border: 1px solid #e0e0e0;
-      border-radius: 10px;
-      padding: 1.5rem;
-      margin: 2rem 0;
-      font-family: 'Roboto', sans-serif;
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .project-title {
-      color: #2c5f2d;
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-  }
-  
+  color: #2c5f2d;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
 .highlight {
-      color: #2c5f2d;
-      font-weight: 700;
-  }
-  
+  color: #2c5f2d;
+  font-weight: 700;
+}
+
 .tech-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-  }
-  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
 .tech-item {
-      background: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-  }
-  
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
 .tech-item:hover {
-      transform: translateY(-5px);
-  }
-  
+  transform: translateY(-5px);
+}
+
 .impact-statement {
-      background: #f0f7e6;
-      padding: 1.5rem;
-      border-left: 4px solid #8db596;
-      margin: 2rem 0;
-      border-radius: 4px;
-  }
-  
+  background: #f0f7e6;
+  padding: 1.5rem;
+  border-left: 4px solid #8db596;
+  margin: 2rem 0;
+  border-radius: 4px;
+}
+
 .badge {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      background: #8db596;
-      color: white;
-      border-radius: 20px;
-      font-size: 0.9rem;
-      margin: 0.5rem 0.5rem 0.5rem 0;
-      font-weight: 500;
-  }
-  .collaboration-info {
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-  }
-  
-  .author {
-    margin: 0.5rem 0;
-    padding: 0.5rem;
-    border-left: 3px solid #8db596;
-  }
-  
-  .institution {
-    display: block;
-    color: #666;
-    font-size: 0.9em;
-    margin-top: 0.2rem;
-  }
-  /* Base Styles */
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #8db596;
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  font-weight: 500;
+}
+
+.collaboration-info {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.author {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-left: 3px solid #8db596;
+}
+
+.institution {
+  display: block;
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 0.2rem;
+}
+
+/* Base Styles */
 :root {
   --primary-color: #023a76;
   --secondary-color: #85bbf5;
@@ -534,7 +582,7 @@ body {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .about-text {
@@ -559,8 +607,8 @@ body {
   max-width: 600px;
   margin: 2rem auto;
 }
-.image-wrap {
 
+.image-wrap {
   width: 100%;
   height: 250px;
   overflow: hidden;
@@ -580,6 +628,7 @@ body {
 .image-wrap:hover img {
   object-position: bottom center;
 }
+
 /* Projects Grid */
 .projects-grid {
   display: grid;
@@ -592,8 +641,17 @@ body {
   background: var(--text-light);
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+}
+
+/* Image style for large devices */
+.project-card img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin: 0 auto 15px;
+  object-fit: cover;
 }
 
 .project-card:hover {
@@ -637,10 +695,10 @@ body {
   border-color: var(--primary-color);
 }
 
-.form-group input:focus + label,
-.form-group textarea:focus + label,
-.form-group input:not(:placeholder-shown) + label,
-.form-group textarea:not(:placeholder-shown) + label {
+.form-group input:focus+label,
+.form-group textarea:focus+label,
+.form-group input:not(:placeholder-shown)+label,
+.form-group textarea:not(:placeholder-shown)+label {
   top: -0.5rem;
   left: 0.8rem;
   font-size: 0.8rem;
@@ -648,6 +706,7 @@ body {
   padding: 0 0.2rem;
   color: var(--primary-color);
 }
+
 .success-message {
   color: #4CAF50;
   padding: 15px;
@@ -808,6 +867,8 @@ body {
   .about-grid {
     grid-template-columns: 1fr;
     text-align: center;
+    /* padding-bottom: 4px; */
+    /* padding-top: 10; */
   }
 
   .profile-img {
@@ -834,17 +895,23 @@ body {
     text-align: center;
   }
 }
+
 .research-links {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-  gap: 10px; /* Adds spacing between buttons */
-  justify-content: space-between; /* Aligns items appropriately */
+  flex-wrap: wrap;
+  /* Allows items to wrap on smaller screens */
+  gap: 10px;
+  /* Adds spacing between buttons */
+  justify-content: space-between;
+  /* Aligns items appropriately */
 }
 
 .research-links .btn {
-  flex: 1; /* Ensures buttons take equal width */
-  text-align: center; /* Centers the button text */
-  padding: 10px 15px;
+  flex: 1;
+  /* Ensures buttons take equal width */
+  text-align: center;
+  /* Centers the button text */
+  padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
@@ -865,14 +932,61 @@ body {
     font-size: 2.2em;
   }
 
+  .contact_btn {
+    background: #ff4757;
+    color: white;
+    /* padding: 10px 15px; */
+    /* Ensure proper spacing */
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.3s;
+    display: inline-flex;
+    /* Makes it behave more like a button */
+    align-items: center;
+    /* Centers the icon */
+    justify-content: center;
+    width: 200px;
+    text-align: center;
+    margin: 2px 0;
+  }
+
+
+  /* #skills {
+    padding: 40px 0;
+    padding-top: -90px;
+    background: #f9f9f9;
+  } */
+
+  .badge {
+    /* display: inline-block; */
+    /* padding: 0.5rem 1rem; */
+    background: #8db596;
+    color: white;
+    border-radius: 10px;
+    font-size: 0.6rem;
+    /* margin: 0.5rem 0.5rem 0.5rem 0; */
+    font-weight: 500;
+  }
+
+  .aboutDetails {
+    font-size: 0.9em;
+    padding-bottom: 0px;
+    margin: 3px;
+    text-align: justify;
+  }
+
+  .project-title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: start;
+  }
+
   header p {
     font-size: 1.1em;
   }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+
 
   .profile-img {
     margin: 0 auto 2rem;
@@ -905,15 +1019,29 @@ body {
   .blog-card {
     font-size: 0.9em;
   }
+
   .research-links {
-    flex-direction: column; /* Stacks buttons vertically */
-    align-items: stretch; /* Makes buttons full width */
+    flex-direction: column;
+    /* Stacks buttons vertically */
+    align-items: stretch;
+    /* Makes buttons full width */
   }
-  
+
   .research-links .btn {
-    font-size: 14px; /* Adjusts font size for smaller screens */
-    padding: 8px 12px; /* Reduces padding */
+    font-size: 14px;
+    /* Adjusts font size for smaller screens */
+    padding: 8px 12px;
+    /* Reduces padding */
   }
+
+
+
+  .jisan-title {
+    font-size: 11px;
+    margin: -12px;
+  }
+
+
 }
 
 /* For small mobile devices (max-width: 480px) */
@@ -955,11 +1083,15 @@ body {
   .contact-form textarea {
     padding: 10px;
   }
+
   .research-links .btn {
-    font-size: 12px; /* Further adjusts font size */
-    padding: 6px 10px; /* Further reduces padding */
+    font-size: 12px;
+    /* Further adjusts font size */
+    padding: 6px 10px;
+    /* Further reduces padding */
   }
 }
+
 /* Base Styles */
 body {
   font-family: Arial, sans-serif;
@@ -974,12 +1106,15 @@ body {
   padding: 2rem;
 }
 
-.header, .footer {
+.header,
+.footer {
   padding: 2rem;
   text-align: center;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 1rem 0;
 }
 
@@ -1011,19 +1146,29 @@ p {
 /* For screens 768px or smaller */
 @media (max-width: 768px) {
   body {
-    font-size: 1rem; /* Adjust font size for medium screens */
+    font-size: 1rem;
+    /* Adjust font size for medium screens */
   }
 
   .container {
-    padding: 1.5rem; /* Adjust container padding */
+    padding: 1.5rem;
+    /* Adjust container padding */
   }
 
-  .header, .footer {
+  .aboutDetails {
+    font-size: 0.9em;
+    /* padding-bottom: 150px; */
+    text-align: justify;
+  }
+
+  .header,
+  .footer {
     padding: 1.5rem;
   }
 
   h1 {
-    font-size: 2rem; /* Smaller header */
+    font-size: 2rem;
+    /* Smaller header */
   }
 
   h2 {
@@ -1035,30 +1180,36 @@ p {
   }
 
   .button {
-    padding: 0.5rem 1rem; /* Adjust button size */
+    padding: 0.5rem 1rem;
+    /* Adjust button size */
   }
 
   img {
     margin: 0.5rem 0;
   }
+
 }
 
 /* For screens 480px or smaller */
 @media (max-width: 480px) {
   body {
-    font-size: 0.875rem; /* Adjust font size for small screens */
+    font-size: 0.875rem;
+    /* Adjust font size for small screens */
   }
 
   .container {
-    padding: 1rem; /* Reduce container padding */
+    padding: 1rem;
+    /* Reduce container padding */
   }
 
-  .header, .footer {
+  .header,
+  .footer {
     padding: 1rem;
   }
 
   h1 {
-    font-size: 1.75rem; /* Smaller header */
+    font-size: 1.75rem;
+    /* Smaller header */
   }
 
   h2 {
@@ -1066,14 +1217,17 @@ p {
   }
 
   p {
-    font-size: 0.875rem; /* Smaller text */
+    font-size: 0.875rem;
+    /* Smaller text */
   }
 
   .button {
-    padding: 0.5rem 0.75rem; /* Even smaller buttons */
+    padding: 0.5rem 0.75rem;
+    /* Even smaller buttons */
   }
 
   img {
-    margin: 0.25rem 0; /* Adjust image margin */
+    margin: 0.25rem 0;
+    /* Adjust image margin */
   }
 }
