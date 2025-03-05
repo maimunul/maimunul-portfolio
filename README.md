@@ -4,7 +4,7 @@
 [![Kaggle](https://img.shields.io/badge/Kaggle-Profile-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/maimunulkjisan)
 [![Research Paper](https://img.shields.io/badge/Research-Q1_Journal-important?style=for-the-badge&logo=arxiv&logoColor=white)]()
 
-![Portfolio Banner](https://i.imgur.com/3Jm5L9O.png) *<!-- Replace with your actual banner image URL -->*
+![Portfolio Banner](https://i.imgur.com/3Jm5L9O.png) <!-- Replace with your actual banner image URL -->
 
 ## 🎯 Portfolio Highlights
 
@@ -52,3 +52,53 @@
           
       def solve_problems(self):
           return "Implementing end-to-end data solutions 🚀"
+  ```
+
+</div>
+
+## 📚 Portfolio Structure
+
+```bash
+portfolio/
+├── Projects/               # Kaggle competitions & ML projects
+│   ├── Mental-Health-Prediction
+│   └── Rice-Disease-CNN
+├── Research/               # Q1 journal paper materials
+├── Blog/                   # Technical articles
+└── Assets/                 # Design resources
+```
+
+## 🛠️ Tech Stack
+
+<div align="center">
+  <img src="https://skillicons.dev/icons?i=py,tensorflow,aws,git,github,md,vscode" />
+  <br>
+  <img src="https://skillicons.dev/icons?i=mysql,docker,raspberrypi,arduino" />
+</div>
+
+## 🚀 Getting Started
+
+1. Clone repo:
+```bash
+git clone https://github.com/maimunul/portfolio.git
+```
+2. Open in browser:
+```bash
+open index.html
+```
+
+## 📬 Let's Connect!
+
+<div align="center">
+  <a href="mailto:maimunulkjisan0@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact-red?style=for-the-badge&logo=gmail"/>
+  </a>
+  <a href="https://www.linkedin.com/in/...">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin"/>
+  </a>
+</div>
+
+<p align="center">
+  <img src="https://visitor-badge.glitch.me/badge?page_id=maimunul.portfolio" alt="visitors"/> 
+  <img src="https://img.shields.io/github/last-commit/maimunul/portfolio?color=blue" alt="last commit"/>
+</p>
