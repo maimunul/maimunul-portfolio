@@ -4,7 +4,7 @@
 [![Kaggle](https://img.shields.io/badge/Kaggle-Profile-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)](https://www.kaggle.com/maimunulkjisan)
 [![Research Paper](https://img.shields.io/badge/Research-Q1_Journal-important?style=for-the-badge&logo=arxiv&logoColor=white)]()
 
-![Portfolio Banner](https://i.imgur.com/3Jm5L9O.png) <!-- Replace with your actual banner image URL -->
+![Portfolio Banner](https://github.com/maimunul/maimunul-portfolio/blob/main/assets/portfoliobanner.png) <!-- Replace with your actual banner image URL -->
 
 ## 🎯 Portfolio Highlights
 
@@ -32,29 +32,7 @@
 [keras]: https://img.shields.io/badge/-Keras-D00000?logo=keras
 [quant]: https://img.shields.io/badge/-Quantization-01A4EF
 
-## 🧠 Core Competencies
 
-<div align="center">
-  
-  ```python
-  class DataScientist:
-      def __init__(self):
-          self.skills = {
-              "languages": ["Python", "SQL"],
-              "ml_frameworks": ["TensorFlow", "Scikit-learn"],
-              "ml_ops": ["DVC", "MLflow", "AWS"],
-              "specializations": [
-                  "Model Compression", 
-                  "Responsible AI",
-                  "IoT Deployment"
-              ]
-          }
-          
-      def solve_problems(self):
-          return "Implementing end-to-end data solutions 🚀"
-  ```
-
-</div>
 
 ## 📚 Portfolio Structure
 
@@ -80,11 +58,11 @@ portfolio/
 
 1. Clone repo:
 ```bash
-git clone https://github.com/maimunul/portfolio.git
+https://github.com/maimunul/maimunul-portfolio.git
 ```
 2. Open in browser:
 ```bash
-open index.html
+https://maimunul-portfolio.netlify.app/
 ```
 
 ## 📬 Let's Connect!
