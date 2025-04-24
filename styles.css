@@ -124,8 +124,8 @@ header p {
   background: #fff;
   padding: 25px;
   padding-top: 30px;
-  padding-bottom: 80px;
-  border-radius: 12px;
+  padding-bottom: 30px;
+  border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
